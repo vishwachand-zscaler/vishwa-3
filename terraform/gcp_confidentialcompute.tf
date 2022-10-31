@@ -8,5 +8,6 @@ resource "google_compute_instance" "confidential" {
   zone         = "us-central1-a"
   confidential_instance_config {
      enable_confidential_compute = false
+    
   }
 }
