@@ -7,6 +7,7 @@ resource "google_compute_instance" "confidential" {
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
   confidential_instance_config {
-     enable_confidential_compute = false    
+     enable_confidential_compute = false  
+    
   }
 }
