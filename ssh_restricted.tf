@@ -15,6 +15,7 @@ resource "azurerm_network_security_group" "example_30" {
     destination_address_prefix = "*"
   }
 
+  
   tags = {
     environment = "Production"
   }
