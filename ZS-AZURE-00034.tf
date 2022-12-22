@@ -5,7 +5,6 @@ resource "azurerm_app_service" "remediation_example" {
     app_service_plan_id = azurerm_app_service_plan.example.id
 
     identity {
-        type = ""
         identity_ids = [
             azurerm_user_assigned_identity.webapp.id,
             azurerm_user_assigned_identity.keyvault.id,
