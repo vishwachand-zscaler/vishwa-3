@@ -10,7 +10,7 @@ resource "azurerm_virtual_machine" "my-linux-vm" {
     lun           = 0
     name          = "my-data-disk"
     managed_disk_type = "Standard_LRS"
-    managed_disk_id = azurerm_managed_disk.my-managed-disk.id
+    managed_disk_id = ""
   }
   
   storage_os_disk {
