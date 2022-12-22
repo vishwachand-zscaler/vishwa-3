@@ -61,4 +61,13 @@ resource "azurerm_key_vault_key" "example" {
     "wrapKey",
   ]
 }
+resource "azurerm_disk_encryption_set" "example" {
+  name                = "des"
+  resource_group_name = "some-rg"
+  location            = "California"
+  key_vault_key_id    = azurerm_key_vault_key.example.id
+  encryption_type     = "EncryptionAtRestWithCustomerKey"
+  identity {
+    type = "SystemAssigned"
+  }
 }
